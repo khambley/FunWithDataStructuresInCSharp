@@ -26,6 +26,14 @@ namespace FunWithDataStructures
                 Console.Write(value: $"{i} ");
             }
             Console.WriteLine();
+            int sum = 0;
+            foreach (var i in bstTest.TraverseInOrder())
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine("The sum of all values in tree is: " + sum);
+
+            Console.WriteLine();
             Console.WriteLine(bstTest.Min());
             Console.WriteLine(bstTest.Max());
             Console.WriteLine(bstTest.Get(20).Value);

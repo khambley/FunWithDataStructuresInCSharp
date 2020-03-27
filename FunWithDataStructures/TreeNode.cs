@@ -57,20 +57,20 @@ namespace FunWithDataStructures
                 return this;
             }
 
-            if(compare < 0)
+            if (compare < 0)
             {
                 if (Left != null) //Recursively going down the tree
                 {
                     return Left.Get(value);
                 }
-                else
+            }
+            else
+            {
+                if (Right != null)
                 {
-                    if(Right != null)
-                    {
-                        return Right.Get(value);
-                    }
-                    
+                    return Right.Get(value);
                 }
+
             }
             return null; //if value not found
         }
